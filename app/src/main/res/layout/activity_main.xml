@@ -6,13 +6,63 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="327dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="45dp" />
+
+    <EditText
+        android:id="@+id/vnum"
+        android:layout_width="326dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:hint="Vehicle no."
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="183dp" />
+
+    <EditText
+        android:id="@+id/tim"
+        android:layout_width="320dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="Time"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="325dp" />
+
+    <EditText
+        android:id="@+id/cont"
+        android:layout_width="326dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="Contact no."
+        android:inputType="phone"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="116dp" />
+
+    <EditText
+        android:id="@+id/spot"
+        android:layout_width="326dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="spot"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="251dp" />
+
+    <Button
+        android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:fontFamily="sans-serif-black"
+        android:hint="SUBMIT"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="419dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
