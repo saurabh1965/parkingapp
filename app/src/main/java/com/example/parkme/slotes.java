@@ -95,5 +95,21 @@ public class slotes extends AppCompatActivity
                                   }
                               }
         );
+
+                s5.setOnClickListener(new Button.OnClickListener(){
+                    public void onClick(View v)
+                    {
+                        if (s5.getText().toString().isEmpty())
+                        {
+                            s5.setText("EmPTY");
+                            s5.setTextColor(Color.GREEN);
+                        }
+                        else
+                        { s5.setText("FiLLED");
+                            s5.setTextColor(Color.RED);
+                        }
+                    }
+                }
+        );
     }
 }
