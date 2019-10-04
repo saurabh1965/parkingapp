@@ -2,6 +2,7 @@ package com.example.parkme;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -17,9 +18,10 @@ public class MainActivity extends AppCompatActivity {
     TextView vnum;
     TextView spot;
     TextView tim;
-    TextView submit;
+    Button submit;
     TextView message;
     List<String> spots =new ArrayList<>();
+    Button b;
 
 
     @Override
@@ -31,16 +33,23 @@ public class MainActivity extends AppCompatActivity {
         spot =(TextView) findViewById(R.id.spot);
         vnum=(TextView) findViewById(R.id.vnum);
         tim =(TextView) findViewById(R.id.tim);
-        submit =(TextView) findViewById(R.id.submit);
+        submit =(Button) findViewById(R.id.submit);
         message =(TextView) findViewById(R.id.message);
-        submit.setOnClickListener(
-                new Button.OnClickListener(){
+        findViewById(R.id.det).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent xy = new Intent(MainActivity.this,slotes.class);
+                startActivity(xy);
+            }
+        });
+        submit.setOnClickListener(new Button.OnClickListener(){
                     public void onClick(View v){
                         //Toast.makeText(MainActivity.this, "detail saved", Toast.LENGTH_SHORT).show();
                         if (name.getText().toString().isEmpty()||tim.getText().toString().isEmpty()||spot.getText().toString().isEmpty()||vnum.getText().toString().isEmpty()||cont.getText().toString().isEmpty())
                         {
                             message.setText("please fill all detail");
                             message.setTextColor(Color.RED);
+
                         }
                         else
                         {
@@ -62,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
         );
 
     }
+
+
 }
 
 
