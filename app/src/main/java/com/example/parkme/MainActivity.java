@@ -38,8 +38,15 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.det).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent xy = new Intent(MainActivity.this,slotes.class);
+                Intent xy = new Intent(MainActivity.this,detail.class);
                 startActivity(xy);
+            }
+        });
+        findViewById(R.id.sslot).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent x = new Intent(MainActivity.this,slotes.class);
+                startActivity(x);
             }
         });
         submit.setOnClickListener(new Button.OnClickListener(){
