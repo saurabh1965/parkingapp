@@ -10,5 +10,6 @@
         android:layout_width="match_parent"
         android:layout_height="54dp"
         android:fontFamily="sans-serif-black"
-        android:text="DETAILS:" />
+        android:text="DETAILS:"
+        android:textSize="36sp" />
 </LinearLayout>
