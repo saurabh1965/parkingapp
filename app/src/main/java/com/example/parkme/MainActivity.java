@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -16,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
     TextView name;
     TextView cont;
     TextView vnum;
-    TextView spot;
+    EditText spot;
+    public static String var ="";
     TextView tim;
     Button submit;
     TextView message;
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         name =(TextView) findViewById(R.id.name);
         cont=(TextView) findViewById(R.id.cont);
-        spot =(TextView) findViewById(R.id.spot);
+        spot =(EditText) findViewById(R.id.spot);
         vnum=(TextView) findViewById(R.id.vnum);
         tim =(TextView) findViewById(R.id.tim);
         submit =(Button) findViewById(R.id.submit);
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent x = new Intent(MainActivity.this,slotes.class);
+                slot=slot.getText().toString();
+                x.putExtra("value", spot);
                 startActivity(x);
             }
         });
@@ -68,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                             else
                             {
                                 spots.add(spot.getText().toString());
+                                var=spot.getText().toString();
                                 message.setText("detail saved");
                                 message.setTextColor(Color.GREEN);
                             }
