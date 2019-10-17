@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent x = new Intent(MainActivity.this,slotes.class);
-                slot=slot.getText().toString();
-                x.putExtra("value", spot);
+               //slot=slot.getText().toString();
+              //  x.putExtra("value", spot);
                 startActivity(x);
             }
         });

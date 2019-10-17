@@ -38,16 +38,16 @@ public class slotes extends AppCompatActivity
         s8 =(TextView) findViewById(R.id.s8);
         s9 =(TextView) findViewById(R.id.s9);
         s10 =(TextView) findViewById(R.id.s10);
-        spot = (TextView) findViewById(R.id.spot)
+        spot = (TextView) findViewById(R.id.spot);
         String x= findViewById(R.id.spot).toString();
        /* try{
             x = findViewById(R.id.spot).toString();
         }catch (Exception e){
             Log.e("aaaa", "onCreate: ");
         }*/
-       spot = getIntent().getExtras().getString("value");
+      // spot = getIntent().getExtras().getString("value");
 
-       x.setText(spot);
+     //  x.setText(spot);
 
         if (2+""==x)
             { s2.setBackgroundColor(Color.RED); }
